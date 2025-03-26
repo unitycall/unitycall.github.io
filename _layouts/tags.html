@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h1>Posts tagged '{{ page.tag }}'</h1>
+{% for post in site.posts %}
+	{% if post.tags contains page.tag %}
+		{% include post-preview.html %}
+	{% endif %}
+{% endfor %}
